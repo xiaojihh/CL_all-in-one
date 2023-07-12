@@ -53,9 +53,6 @@ if __name__=='__main__':
     criterion.append(ContrastLoss(device).to(device))
 
     model = CLAIO(net, criterion, trainloader, testloader, device, trainLogger, args)
-
-    model.net.load_state_dict(torch.load('./checkpoints/haze/net_step500000.pth', map_location=device))
-    model.after_train(0)
     
     for task_id in range(1, len(args.task_order)):
         print(f'task{task_id} begin!')
