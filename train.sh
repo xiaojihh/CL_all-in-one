@@ -1,0 +1,1 @@
+python main.py --task_order haze rain snow

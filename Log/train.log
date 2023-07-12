@@ -1,0 +1,129 @@
+task0 begin!
+task0 begin!
+task0 begin!
+task0 begin!
+task0 begin!
+task0 begin!
+task0 begin!
+task0 begin!
+step:5000 |ssim:nan |psnr:nan
+step:10000 |ssim:nan |psnr:nan
+task0 begin!
+step:5000 |ssim:0.9077 |psnr:22.31
+model saved at setp:5000 |max_ssim:0.9077 |max_psnr:22.31
+step:10000 |ssim:0.8821 |psnr:23.42
+step:15000 |ssim:0.9237 |psnr:24.04
+model saved at setp:15000 |max_ssim:0.9237 |max_psnr:24.04
+step:20000 |ssim:0.9256 |psnr:25.10
+model saved at setp:20000 |max_ssim:0.9256 |max_psnr:25.10
+step:25000 |ssim:0.9403 |psnr:24.98
+step:30000 |ssim:0.9291 |psnr:24.48
+step:35000 |ssim:0.9499 |psnr:25.77
+model saved at setp:35000 |max_ssim:0.9499 |max_psnr:25.77
+step:40000 |ssim:0.9480 |psnr:25.92
+step:45000 |ssim:0.9286 |psnr:24.66
+step:50000 |ssim:0.9484 |psnr:26.35
+step:55000 |ssim:0.9465 |psnr:26.75
+step:60000 |ssim:0.9577 |psnr:27.01
+model saved at setp:60000 |max_ssim:0.9577 |max_psnr:27.01
+step:65000 |ssim:0.9592 |psnr:26.12
+step:70000 |ssim:0.9437 |psnr:25.12
+step:75000 |ssim:0.9288 |psnr:25.75
+step:80000 |ssim:0.9571 |psnr:26.81
+step:85000 |ssim:0.9625 |psnr:27.91
+model saved at setp:85000 |max_ssim:0.9625 |max_psnr:27.91
+step:90000 |ssim:0.9555 |psnr:27.84
+step:95000 |ssim:0.9632 |psnr:27.52
+step:100000 |ssim:0.9454 |psnr:26.89
+step:105000 |ssim:0.9593 |psnr:26.68
+step:110000 |ssim:0.9571 |psnr:26.99
+step:115000 |ssim:0.9651 |psnr:28.24
+model saved at setp:115000 |max_ssim:0.9651 |max_psnr:28.24
+step:120000 |ssim:0.9414 |psnr:26.83
+step:125000 |ssim:0.9350 |psnr:26.26
+step:130000 |ssim:0.9638 |psnr:27.67
+step:135000 |ssim:0.9412 |psnr:27.46
+step:140000 |ssim:0.9668 |psnr:28.12
+step:145000 |ssim:0.9299 |psnr:26.81
+step:150000 |ssim:0.9639 |psnr:27.87
+step:155000 |ssim:0.9443 |psnr:26.82
+step:160000 |ssim:0.9724 |psnr:29.28
+model saved at setp:160000 |max_ssim:0.9724 |max_psnr:29.28
+step:165000 |ssim:0.9665 |psnr:28.75
+step:170000 |ssim:0.9658 |psnr:28.79
+step:175000 |ssim:0.9634 |psnr:27.64
+step:180000 |ssim:0.9712 |psnr:28.73
+step:185000 |ssim:0.9671 |psnr:28.68
+step:190000 |ssim:0.9675 |psnr:28.97
+step:195000 |ssim:0.9582 |psnr:28.33
+step:200000 |ssim:0.9669 |psnr:27.96
+step:205000 |ssim:0.9690 |psnr:29.11
+step:210000 |ssim:0.9711 |psnr:29.18
+step:215000 |ssim:0.9719 |psnr:29.75
+step:220000 |ssim:0.9442 |psnr:27.28
+step:225000 |ssim:0.9740 |psnr:30.35
+model saved at setp:225000 |max_ssim:0.9740 |max_psnr:30.35
+step:230000 |ssim:0.9662 |psnr:26.96
+step:235000 |ssim:0.9703 |psnr:28.62
+step:240000 |ssim:0.9744 |psnr:29.99
+step:245000 |ssim:0.9707 |psnr:29.74
+step:250000 |ssim:0.9735 |psnr:30.15
+step:255000 |ssim:0.9744 |psnr:30.08
+step:260000 |ssim:0.9723 |psnr:29.51
+step:265000 |ssim:0.9671 |psnr:28.77
+step:270000 |ssim:0.9666 |psnr:28.43
+step:275000 |ssim:0.9710 |psnr:29.26
+step:280000 |ssim:0.9223 |psnr:27.06
+step:285000 |ssim:0.9736 |psnr:29.94
+step:290000 |ssim:0.9748 |psnr:30.52
+model saved at setp:290000 |max_ssim:0.9748 |max_psnr:30.52
+step:295000 |ssim:0.9724 |psnr:29.47
+step:300000 |ssim:0.9749 |psnr:30.58
+model saved at setp:300000 |max_ssim:0.9749 |max_psnr:30.58
+step:305000 |ssim:0.9744 |psnr:30.51
+step:310000 |ssim:0.9709 |psnr:29.91
+step:315000 |ssim:0.9707 |psnr:29.58
+step:320000 |ssim:0.9735 |psnr:29.48
+step:325000 |ssim:0.9743 |psnr:30.53
+step:330000 |ssim:0.9750 |psnr:30.49
+step:335000 |ssim:0.9693 |psnr:28.99
+step:340000 |ssim:0.9750 |psnr:30.34
+step:345000 |ssim:0.9755 |psnr:30.64
+model saved at setp:345000 |max_ssim:0.9755 |max_psnr:30.64
+step:350000 |ssim:0.9739 |psnr:29.92
+step:355000 |ssim:0.9737 |psnr:30.28
+step:360000 |ssim:0.9739 |psnr:30.36
+step:365000 |ssim:0.9720 |psnr:30.12
+step:370000 |ssim:0.9765 |psnr:31.00
+model saved at setp:370000 |max_ssim:0.9765 |max_psnr:31.00
+step:375000 |ssim:0.9766 |psnr:30.53
+step:380000 |ssim:0.9751 |psnr:30.47
+step:385000 |ssim:0.9764 |psnr:30.83
+step:390000 |ssim:0.9765 |psnr:30.99
+step:395000 |ssim:0.9757 |psnr:30.44
+step:400000 |ssim:0.9752 |psnr:30.65
+step:405000 |ssim:0.9755 |psnr:30.54
+step:410000 |ssim:0.9751 |psnr:30.64
+step:415000 |ssim:0.9761 |psnr:30.69
+step:420000 |ssim:0.9754 |psnr:30.68
+step:425000 |ssim:0.9735 |psnr:30.32
+step:430000 |ssim:0.9765 |psnr:30.72
+step:435000 |ssim:0.9770 |psnr:30.85
+step:440000 |ssim:0.9763 |psnr:30.81
+step:445000 |ssim:0.9770 |psnr:31.05
+model saved at setp:445000 |max_ssim:0.9770 |max_psnr:31.05
+step:450000 |ssim:0.9755 |psnr:30.67
+step:455000 |ssim:0.9766 |psnr:30.86
+step:460000 |ssim:0.9768 |psnr:31.00
+step:465000 |ssim:0.9768 |psnr:30.89
+step:470000 |ssim:0.9767 |psnr:30.94
+step:475000 |ssim:0.9772 |psnr:31.05
+step:480000 |ssim:0.9768 |psnr:30.97
+step:485000 |ssim:0.9772 |psnr:31.00
+step:490000 |ssim:0.9770 |psnr:30.99
+step:495000 |ssim:0.9770 |psnr:30.97
+step:500000 |ssim:0.9770 |psnr:30.96
+task1 begin!
+task1 begin!
+task1 begin!
+task1 begin!
