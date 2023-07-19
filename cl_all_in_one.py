@@ -143,7 +143,7 @@ class CLAIO():
             exemplar.collect_exemplar(self.trainloader[task_id].dataset, task_num=task_id+1)
             self.exemplar_loader = DataLoader(dataset=exemplar, batch_size=self.args.bs, shuffle=True)
         else:
-            self.exemplar_loader.dataset.collect_exemplar(self.trainloader[task_id], task_num=task_id+1)
+            self.exemplar_loader.dataset.collect_exemplar(self.trainloader.dataset[task_id], task_num=task_id+1)
 
         self.net.load_state_dict(torch.load(os.path.join(self.args.save_model_dir, self.args.task_order[task_id], 'ffa_best.pk'), map_location=self.device)['model'])
         self.net.freeze_all()
