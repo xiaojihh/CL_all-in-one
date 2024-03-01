@@ -161,6 +161,6 @@ class Auencoder():
                 loss.backward()
                 optim.step()
                 print(f'\rLoss:{loss.item():.5f} |epoch:{epoch+1}/{epochs} |time_used{(time.time()-start_time)/60:.1f}min', end='', flush=True)
-            torch.save(self.pjt.state_dict(), os.path.join(self.args.save_model_dir, self.args.task_order[task_id], 'encoder_haze.pth'))
-            torch.save(self.r_pjt.state_dict(), os.path.join(self.args.save_model_dir, self.args.task_order[task_id], 'decoder_haze.pth'))
+            torch.save(self.pjt.state_dict(), os.path.join(self.args.save_model_dir, self.args.exp_name, self.args.task_order[task_id], 'encoder_haze.pth'))
+            torch.save(self.r_pjt.state_dict(), os.path.join(self.args.save_model_dir, self.args.exp_name, self.args.task_order[task_id], 'decoder_haze.pth'))
             print('')

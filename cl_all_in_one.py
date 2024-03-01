@@ -40,8 +40,8 @@ class CLAIO():
         start_time = time.time()
         old_x, old_y = None, None
 
-        create_dir(os.path.join(self.args.save_model_dir, self.args.task_order[task_id]))
-        for step in range(1, self.args.steps+1):
+        create_dir(os.path.join(self.args.save_model_dir, self.args.exp_name, self.args.task_order[task_id]))
+        for step in range(0, self.args.steps+1):
             self.net.train()
             if not self.args.no_lr_sche:
                 lr = lr_schedule_cosdecay(step, T, self.args.lr)
@@ -65,7 +65,7 @@ class CLAIO():
             print(f'\rswloss:{swloss.item():.5f} |kdloss:{kdloss.item():.5f} |p_loss:{p_loss.item():.5f} |step:{step}/{self.args.steps} |lr: {lr:.7f} |time_used: {(time.time()-start_time)/60:.1f}min', end='', flush=True)
 
             if step > 0 and step % self.args.eval_step == 0:
-                torch.save(self.net.state_dict(), os.path.join(self.args.save_model_dir, self.args.task_order[task_id], 'net_step%d.pth' % (step)))
+                torch.save(self.net.state_dict(), os.path.join(self.args.save_model_dir, self.args.exp_name, self.args.task_order[task_id], 'net_step%d.pth' % (step)))
                 ssim_eval, psnr_eval = self.test(task_id)
                 print(f'step:{step} |ssim:{ssim_eval:.4f} |psnr:{psnr_eval:.2f}')
                 self.trainLogger.write(f'step:{step} |ssim:{ssim_eval:.4f} |psnr:{psnr_eval:.2f}\n')
@@ -77,7 +77,7 @@ class CLAIO():
                         'max_ssim': max_ssim,
                         'max_psnr': max_psnr,
                         'model': self.net.state_dict()
-                    }, os.path.join(self.args.save_model_dir, self.args.task_order[task_id], 'ffa_best.pk'))
+                    }, os.path.join(self.args.save_model_dir, self.args.exp_name, self.args.task_order[task_id], 'ffa_best.pk'))
                     print(f'model saved at setp:{step} |max_ssim:{max_ssim:.4f} |max_psnr:{max_psnr:.2f}')
                     self.trainLogger.write(f'model saved at setp:{step} |max_ssim:{max_ssim:.4f} |max_psnr:{max_psnr:.2f}\n')
 
@@ -114,7 +114,6 @@ class CLAIO():
     @torch.no_grad()
     def test(self, task_id):
         self.net.eval()
-        torch.cuda.empty_cache()
 
         ssim_eval = []
         psnr_eval = []
@@ -139,13 +138,13 @@ class CLAIO():
     
     def after_train(self, task_id):
         if task_id == 0:
-            exemplar = Exemplar_Dataset(max_num_exemplar=500)
+            exemplar = Exemplar_Dataset(max_num_exemplar=self.args.memory_size)
             exemplar.collect_exemplar(self.trainloader[task_id].dataset, task_num=task_id+1)
             self.exemplar_loader = DataLoader(dataset=exemplar, batch_size=self.args.bs, shuffle=True)
         else:
-            self.exemplar_loader.dataset.collect_exemplar(self.trainloader.dataset[task_id], task_num=task_id+1)
+            self.exemplar_loader.dataset.collect_exemplar(self.trainloader[task_id].dataset, task_num=task_id+1)
 
-        self.net.load_state_dict(torch.load(os.path.join(self.args.save_model_dir, self.args.task_order[task_id], 'ffa_best.pk'), map_location=self.device)['model'])
+        self.net.load_state_dict(torch.load(os.path.join(self.args.save_model_dir, self.args.exp_name, self.args.task_order[task_id], 'ffa_best.pk'), map_location=self.device)['model'])
         self.net.freeze_all()
 
         self.autoencoder.train(train_loader=self.exemplar_loader, net=self.net, epochs=50, task_id=task_id)
