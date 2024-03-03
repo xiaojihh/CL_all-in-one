@@ -3,7 +3,7 @@
 
 
 > [**Continual All-in-One Adverse Weather Removal with Knowledge Replay on a Unified Network Structure**]<br>
-> [De Cheng*], [Yanling Ji*], [Dong Gong*], [Nannan Wang*], [Junwei Han*], [Dingwen Zhang*]
+> [De Cheng*], [Yanling Ji*], [Dong Gong], [Nannan Wang], [Junwei Han], [Dingwen Zhang]
 
 
 
