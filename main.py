@@ -61,7 +61,7 @@ if __name__=='__main__':
     for task_id in range(len(args.task_order)):
         print(f'task{task_id} begin!')
         model.trainLogger.write(f'task{task_id} begin!\n')
-        if task_id in args.resume:
+        if args.resume is not None and task_id in args.resume:
             model.after_train(task_id)
         else:
             model.train(task_id)
